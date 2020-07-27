@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    background-color: #ccc;
+}
+
+.container{
+    max-width:1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main-box{
+    box-sizing:none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 13% );
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    max-height: 600px;
+    border-radius: 15px;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-txt{
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: white;
+    z-index: 2;
+}
+
+.main-txt h1{
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-left: 8%;
+    padding-right:2%;
+    color: #2ab2af;    ;
+}
+
+.main-txt h2{
+    font-size: 20px;
+    font-weight: 300;
+    color: #c0df34;
+    margin-top:20px;
+    margin-left:8%;
+}
+
+.main-txt p{
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-left: 8%;
+    color: #98a6bd;
+}
+
+.subscription{
+    width: 50%;
+    background-color: #25a5a3;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subscription h2{
+    font-weight: 700;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 15%;
+}
+
+.subscription p.price{
+    width:50%;
+    font-weight: 700;
+    color: white;
+    font-size: 28px;
+    margin-top: -60px;
+    margin-left: 15%;
+    max-width: 70px;
+}
+
+.subscription p.time{
+    width: 50%; 
+    margin-top: -50px;
+    font-weight: 400;
+    
+    color: #b8c3ca;
+}
+
+.subscription p.description{
+    margin-left: 15%;
+    color: white;
+    margin-top: -50px;
+}
+
+.subscription p{
+    max-height: 20px;
+}
+
+.submit{
+    width: 100%;
+}
+
+.submit input{
+    position: relative;
+    top: -10%;
+    left:15%;
+    width: 239px;
+    background-color: hsl(71, 100%, 59%);
+    color: white;
+    border-radius: 5px;
+    border:0;
+    height: 50px;
+}
+
+.submit input:hover{
+    background-color:hsl(71, 89%, 36%);
+    transition:1s;
+    outline: 0;
+}
+
+.submit input:active{
+    outline: 0;
+    box-shadow: 0 0 4pt 4pt white;
+    transition: 0.7s;
+}
+
+.why{
+    width: 50%;
+    background-color:hsl(179, 62%, 49%);
+    border-bottom-right-radius: 10px;
+}
+
+.why h2{
+    font-size:20px;
+    font-weight: 700;
+    color: white;
+    margin-top:30px ;
+    margin-left: 15%;
+    margin-bottom: 30px;
+}
+
+.why p{
+    font-size: 16px;
+    font-weight: 400;
+    color:white;
+    margin-left: 15%;
+    margin-right: 2%;
+}
+
+/* media querys*/
+/*problema com o P que depois de 268 de largura começa a ocupar o espaço da div de baixo, não consegui resolver :( */
+@media screen and (max-width: 768px){
+
+    .main-box{
+        display:block;
+        float: left;
+        
+    }
+
+    .main-txt{
+        padding-right: 2%;
+        height: 300px;
+        margin: auto;
+        width: 90%;
+    }
+
+    .main-txt h1{
+        margin-left: 10%;
+        padding-top: 10px;
+    }
+
+    .main-txt h2{
+        margin-left:10% ;
+    }
+
+    .main-txt p{
+        margin-left: 10%;
+        padding-right:10% ;
+        margin-bottom: 5px;
+    }
+
+    .subscription{
+        margin: auto;
+        height: 300px;
+        width: 90%;
+        border-radius:0 ;
+        padding-right: 2%;
+    }
+
+    .subscription h2{
+    margin-left: 10%;
+}
+
+    .subscription p.price{
+        margin-left: 10%;
+
+}
+
+    .subscription p.description{
+        margin-left: 10%;
+    }
+
+    .submit input{
+        align-items: center;
+        width: 100%;
+        max-width: 82%;
+        margin-left: -5%;
+    }
+
+    .submit input:active{
+        box-shadow: 0 0 4pt 4pt white;
+        transition: 0.7s;
+    }
+
+    .why{
+        width: 90%;
+        height: 300px;
+        margin: auto;
+        margin-top:-30px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        padding-right: 2%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .why h2{
+        padding-top: 30px;
+        margin-left: 10%;
+    }
+
+    .why p{
+        margin-left: 10%;
+        margin-top: -15px;
+    }
+
+}
